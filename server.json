@@ -1,0 +1,44 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de Software",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "2023-09-20T13:49:06.233Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburguer",
+      "type": "outcome",
+      "category": "Compra",
+      "price": 50,
+      "createdAt": "2023-09-20T13:49:06.233Z"
+    },
+    {
+      "id": 3,
+      "description": "Iginete Rocketseat",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1980,
+      "createdAt": "2023-09-20T13:49:06.233Z"
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2023-09-23T20:01:33.473Z",
+      "id": 4
+    },
+    {
+      "description": "Rodizio de pizzas",
+      "price": 90,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-09-23T20:27:03.252Z",
+      "id": 5
+    }
+  ]
+}

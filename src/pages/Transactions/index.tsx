@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
@@ -6,8 +7,12 @@ import {
   TransactionsTable,
   TrasactionsContainer,
 } from "./styles";
+import { TransactionsContext } from "../../Contexts/TransactionsContext";
+import { dateFormaer, priceFormaer } from "../../utils/formater";
 
 export function Transactions() {
+  const { transactions } = useContext(TransactionsContext);
+
   return (
     <div>
       <Header />
@@ -17,24 +22,21 @@ export function Transactions() {
         <SearchForm />
         <TransactionsTable>
           <tbody>
-            <tr>
-              <td width="50%">Desenvolvimento de software</td>
-              <td>
-                <PriceHightLight variant="income">R$ 12.000,00</PriceHightLight>
-              </td>
-              <td>venda</td>
-              <td>16/09/2023</td>
-            </tr>
-            <tr>
-              <td width="50%">monitor</td>
-              <td>
-                <PriceHightLight variant="outcome">
-                  - R$ 2.000,00
-                </PriceHightLight>
-              </td>
-              <td>alimentação</td>
-              <td>11/02/2023</td>
-            </tr>
+            {transactions.map((transaction) => {
+              return (
+                <tr key={transaction.id}>
+                  <td width="50%">{transaction.description}</td>
+                  <td>
+                    <PriceHightLight variant={transaction.type}>
+                      {transaction.type === "outcome" && "- "}
+                      {priceFormaer.format(transaction.price)}
+                    </PriceHightLight>
+                  </td>
+                  <td>{transaction.category}</td>
+                  <td>{dateFormaer.format(new Date(transaction.createdAt))}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </TransactionsTable>
       </TrasactionsContainer>
