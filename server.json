@@ -9,36 +9,20 @@
       "createdAt": "2023-09-20T13:49:06.233Z"
     },
     {
-      "id": 2,
-      "description": "Hamburguer",
-      "type": "outcome",
-      "category": "Compra",
-      "price": 50,
-      "createdAt": "2023-09-20T13:49:06.233Z"
-    },
-    {
-      "id": 3,
-      "description": "Iginete Rocketseat",
-      "type": "outcome",
-      "category": "Educação",
-      "price": 1980,
-      "createdAt": "2023-09-20T13:49:06.233Z"
-    },
-    {
       "description": "Desenvolvimento de app",
-      "price": 10000,
+      "price": 12000,
       "category": "Venda",
       "type": "income",
-      "createdAt": "2023-09-23T20:01:33.473Z",
-      "id": 4
+      "createdAt": "2023-09-25T01:27:59.878Z",
+      "id": 2
     },
     {
-      "description": "Rodizio de pizzas",
-      "price": 90,
-      "category": "Alimentação",
+      "description": "Designer ",
+      "price": 4569,
+      "category": "pagamento",
       "type": "outcome",
-      "createdAt": "2023-09-23T20:27:03.252Z",
-      "id": 5
+      "createdAt": "2023-09-25T01:28:18.914Z",
+      "id": 3
     }
   ]
 }
